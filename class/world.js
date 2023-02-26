@@ -12,6 +12,7 @@ class World {
         const roomList = worldData.rooms;
         const itemList = worldData.items;
 
+
         // Instantiate new room objects
         // Get name, id and description from room data
         for (let i = 0 ; i < roomList.length ; i++) {
@@ -42,11 +43,12 @@ class World {
 
             let itemData = itemList[i];
             let newItem;
+            
 
             if (itemData.isFood) {
-                console.log("ERROR: Food not supported yet.");
+                // console.log("ERROR: Food not supported yet.");
                 // Fill this in
-                return;
+                newItem = new Food(itemData.name, itemData.description);
             } else {
                 newItem = new Item(itemData.name, itemData.description);
             }
